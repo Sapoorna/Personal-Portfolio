@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sapoorna Janani</title>
+    <meta name="description" content="Get in touch with Sapoorna Janani for opportunities and collaborations">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sapoorna Janani</h1>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
+              <span class="line1"></span>
+              <span class="line2"></span>
+              <span class="line3"></span>
+            </label>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <p class="hero-subtitle">I'm currently available for internship opportunities and collaborations</p>
+        </section>
+
+        <!-- Contact Content Section -->
+        <section class="contact-content" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" class="sr-only">Contact Information</h2>
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm" action="mailto:sapoornajanani@gmail.com" method="post" enctype="text/plain">
+
+                <!-- Name Input Field -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+
+                <!-- Email Input Field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+
+                <!-- Phone Input Field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+94 123 456 789" pattern="\\+?[0-9\\s-]{7,15}" title="Please enter a valid phone number">
+                </div>
+
+                <!-- Subject Input Field -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <!-- Newsletter Subscription Checkbox -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to my newsletter for updates</label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+
+            <!-- Contact Information Sidebar -->
+            <aside class="contact-info">
+                <h2>Other Ways to Reach Me</h2>
+                
+                <!-- Availability Status -->
+                <div class="contact-method">
+                    <h3>Availability Status</h3>
+                    <p><strong>🟢 Open to Opportunities</strong></p>
+                    <p>Currently seeking internship positions in web development and software engineering</p>
+                </div>
+                
+                <!-- Email Contact Method -->
+                <div class="contact-method">
+                    <h3>Email</h3>
+                    <p>sapoornajanani@gmail.com</p>
+                </div>
+                
+                <!-- Social Media Contact Method -->
+                <div class="contact-method">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sapoorna-janani-6169b5264" class="social-link" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Sapoorna" class="social-link" target="_blank">GitHub</a>
+                        <a href="https://www.instagram.com/_sapoo.30_?igsh=MTAyZWEzMHExNThoag==" class="social-link" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                
+                <!-- Response Time Information -->
+                <div class="contact-method">
+                    <h3>Response Time</h3>
+                    <p>I typically respond to messages within 24-48 hours.</p>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-method">
+                    <h3>Location</h3>
+                    <p>Colombo, Sri Lanka</p>
+                    <p>Open to remote opportunities</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sapoorna Janani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
