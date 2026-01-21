@@ -25,7 +25,7 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -43,7 +43,43 @@
       <section class="featured-projects">
         <h2>Featured Projects</h2>
         
-        <!-- Project 1 -->
+        <!-- Software Development Group Project -->
+        <article class="project-card">
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-category">Team Project & UI/UX Design</span>
+              <h3>Software Development Group Project</h3>
+              <div class="project-meta">
+                <span class="project-date">University Project</span>
+                <span class="project-duration">Ongoing</span>
+              </div>
+            </div>
+            
+            <div class="project-description">
+              <p>Collaborative team-based software solution development with focus on UI/UX design principles and agile methodologies.</p>
+              
+              <div class="project-features">
+                <h4>Key Responsibilities:</h4>
+                <ul>
+                  <li>Designed wireframes and prototypes using Figma</li>
+                  <li>Created UI layouts for team-based software solution</li>
+                  <li>Collaborated with team members using version control</li>
+                  <li>Implemented responsive design principles</li>
+                </ul>
+              </div>
+              
+              <div class="tech-stack">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">UI/UX Design</span>
+                <span class="tech-tag">Team Collaboration</span>
+                <span class="tech-tag">Prototyping</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Flower Shop Project -->
         <article class="project-card">
           <div class="project-content">
             <div class="project-header">
@@ -56,15 +92,16 @@
             </div>
             
             <div class="project-description">
-              <p>A full-stack e-commerce platform for a flower shop with product catalog, shopping cart, and responsive design. Built with modern web technologies to provide seamless user experience across all devices.</p>
+              <p>A responsive full-stack e-commerce platform with Node.js/Express backend and dynamic front-end, implementing RESTful principles.</p>
               
               <div class="project-features">
                 <h4>Key Features:</h4>
                 <ul>
-                  <li>Product catalog with categories</li>
+                  <li>Product listings with categories</li>
                   <li>Shopping cart functionality</li>
-                  <li>Responsive mobile design</li>
-                  <li>User authentication system</li>
+                  <li>Simulated checkout process</li>
+                  <li>Environment-based configuration</li>
+                  <li>Modular routing for scalability</li>
                 </ul>
               </div>
               
@@ -74,7 +111,7 @@
                 <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">RESTful API</span>
               </div>
             </div>
             
@@ -83,15 +120,11 @@
                 View Code
                 <span>↗</span>
               </a>
-              <a href="#" class="project-link demo-link">
-                Live Demo
-                <span>↗</span>
-              </a>
             </div>
           </div>
         </article>
 
-        <!-- Project 2 -->
+        <!-- Traffic Data Analyzer -->
         <article class="project-card">
           <div class="project-content">
             <div class="project-header">
@@ -104,15 +137,15 @@
             </div>
             
             <div class="project-description">
-              <p>Python-based application for processing and visualizing traffic patterns using data analysis libraries. Provides insights through interactive charts and statistical analysis.</p>
+              <p>Python program to analyze traffic data from CSV files with statistical analysis and visualization capabilities.</p>
               
               <div class="project-features">
                 <h4>Key Features:</h4>
                 <ul>
-                  <li>Data processing with Pandas</li>
-                  <li>Interactive data visualization</li>
-                  <li>Statistical analysis</li>
-                  <li>GUI interface with Tkinter</li>
+                  <li>Process traffic data from CSV files</li>
+                  <li>Perform basic statistical analysis</li>
+                  <li>Visualize traffic patterns using histograms (tkinter)</li>
+                  <li>Export processed results to text files</li>
                 </ul>
               </div>
               
@@ -122,6 +155,7 @@
                 <span class="tech-tag">Matplotlib</span>
                 <span class="tech-tag">Tkinter</span>
                 <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">CSV Processing</span>
               </div>
             </div>
             
@@ -134,7 +168,7 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
+        <!-- Coffee Shop Website -->
         <article class="project-card">
           <div class="project-content">
             <div class="project-header">
@@ -147,15 +181,16 @@
             </div>
             
             <div class="project-description">
-              <p>Responsive e-commerce website for a coffee shop featuring modern UI design, product showcase, and seamless user experience across all devices.</p>
+              <p>Fully responsive front-end website featuring dynamic product catalog and interactive shopping cart.</p>
               
               <div class="project-features">
                 <h4>Key Features:</h4>
                 <ul>
-                  <li>Fully responsive design</li>
-                  <li>Product gallery with filters</li>
-                  <li>Shopping cart system</li>
-                  <li>Modern CSS animations</li>
+                  <li>Dynamic product catalog</li>
+                  <li>Interactive shopping cart using JavaScript</li>
+                  <li>LocalStorage for user sessions</li>
+                  <li>Cross-device compatibility</li>
+                  <li>Clean UI/UX design</li>
                 </ul>
               </div>
               
@@ -164,6 +199,7 @@
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">LocalStorage</span>
               </div>
             </div>
             
@@ -172,8 +208,49 @@
                 View Code
                 <span>↗</span>
               </a>
-              <a href="#" class="project-link demo-link">
-                Live Demo
+            </div>
+          </div>
+        </article>
+
+        <!-- Portfolio Website -->
+        <article class="project-card">
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-category">Frontend Development</span>
+              <h3>Portfolio Website</h3>
+              <div class="project-meta">
+                <span class="project-date">Current</span>
+                <span class="project-duration">Ongoing</span>
+              </div>
+            </div>
+            
+            <div class="project-description">
+              <p>This responsive portfolio website showcasing academic and personal projects with clean, maintainable code.</p>
+              
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Fully responsive design</li>
+                  <li>Semantic HTML for accessibility</li>
+                  <li>Modern CSS with dark theme</li>
+                  <li>Interactive UI elements</li>
+                  <li>Clean, maintainable code structure</li>
+                </ul>
+              </div>
+              
+              <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">UI/UX</span>
+                <span class="tech-tag">Accessibility</span>
+              </div>
+            </div>
+            
+            <div class="project-links">
+              <a href="https://github.com/Sapoorna" class="project-link" target="_blank">
+                GitHub Profile
                 <span>↗</span>
               </a>
             </div>
@@ -181,27 +258,38 @@
         </article>
       </section>
 
-      <!-- More Projects Section -->
+      <!-- University Projects Section -->
       <section class="more-projects">
-        <h2>Other Projects</h2>
+        <h2>University & Academic Projects</h2>
         <div class="projects-grid">
-          <div class="mini-project">
-            <h3>Personal Portfolio Website</h3>
-            <p>This responsive portfolio website built with pure HTML, CSS, and JavaScript.</p>
+          <div class="mini-project card">
+            <h3>Object-Oriented Programming Projects</h3>
+            <p>Java-based applications implementing OOP principles including inheritance, polymorphism, and design patterns.</p>
             <div class="mini-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+              <span>Java</span>
+              <span>OOP</span>
+              <span>Design Patterns</span>
             </div>
           </div>
           
-          <div class="mini-project">
-            <h3>University Assignments</h3>
-            <p>Various programming assignments and projects from my computer science coursework.</p>
+          <div class="mini-project card">
+            <h3>Database Systems</h3>
+            <p>MySQL database design and implementation projects with normalized schemas and complex queries.</p>
+            <div class="mini-tech">
+              <span>MySQL</span>
+              <span>Database Design</span>
+              <span>SQL</span>
+            </div>
+          </div>
+          
+          <div class="mini-project card">
+            <h3>Software Development I & II</h3>
+            <p>Various programming assignments and projects covering algorithms, data structures, and software engineering principles.</p>
             <div class="mini-tech">
               <span>Java</span>
               <span>Python</span>
               <span>Algorithms</span>
+              <span>Data Structures</span>
             </div>
           </div>
         </div>

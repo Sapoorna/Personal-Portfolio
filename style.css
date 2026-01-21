@@ -471,6 +471,21 @@ footer {
     border: 1px solid var(--border-color);
 }
 
+/* Profile card in about */
+.profile-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.profile-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
 /* Education section */
 .education {
     margin: 4rem 0;
@@ -964,6 +979,156 @@ textarea:focus {
     height: 2px;
     background-color: var(--text-primary);
     transition: all 0.3s ease;
+}
+/* Education details */
+.education-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.education-details h4 {
+    color: var(--secondary-color);
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.education-details p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Languages section */
+.languages-section {
+    margin: 4rem 0;
+}
+
+.languages-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.languages-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--gradient);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+}
+
+.languages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.language-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.language-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.language-item p {
+    color: var(--text-secondary);
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+/* References section */
+.references-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.references-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reference-item {
+    padding: 2rem;
+}
+
+.reference-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.reference-item p {
+    color: var(--text-secondary);
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.note {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Enhanced certifications grid for more items */
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Active navigation link */
+.nav-links a.active {
+    color: var(--text-primary);
+    background: var(--semi-transparent);
+    border-radius: 6px;
+}
+
+/* Responsive adjustments for new sections */
+@media screen and (max-width: 768px) {
+    .languages-container,
+    .references-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-details {
+        padding: 1rem 0;
+    }
+    
+    .profile-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .language-item,
+    .reference-item {
+        padding: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
