@@ -1,121 +1,671 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sapoorna Janani - Portfolio</title>
-    <meta name="description" content="Sapoorna Janani - Computer Science Student & Web Developer Portfolio">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Sapoorna Janani | Computer Science Student & Developer</title>
+    <meta
+      name="description"
+      content="Sapoorna Janani - Computer Science student at University of Westminster specializing in full-stack and mobile development. View my portfolio of web and mobile applications."
+    />
+    <meta
+      name="keywords"
+      content="Sapoorna Janani, portfolio, web developer, Flutter, React, FastAPI, computer science student"
+    />
+    <meta name="author" content="Sapoorna Janani" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      ="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
-    <!--Header Section with Navigation -->
+    <!-- Header Navigation -->
     <header>
       <nav>
         <div class="logo">
           <h1>Sapoorna Janani</h1>
         </div>
-        <!-- Mobile Menu Toggle -->
-        <input type="checkbox" id="menu-toggle">
+        <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="burger">
-          <span class="line1"></span>
-          <span class="line2"></span>
-          <span class="line3"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </label>
-
-        <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Main Content Area -->
     <main>
-      <!-- Hero Section - Introduction -->
-      <section class="hero">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
         <div class="hero-content">
-          <div class="hero-subtitle">
-            Computer Science Student & Web Developer
-          </div>
-          <!-- Main Heading -->
+          <div class="hero-subtitle">Computer Science Student</div>
           <h1>Sapoorna Janani</h1>
-          <!-- Introduction Paragraph -->
           <p>
-            Passionate Computer Science student at University of Westminster 
-            creating functional web solutions through clean code and modern technologies. 
-            Currently seeking internship opportunities to apply my skills in real-world projects.
+            Computer Science undergraduate at the Informatics Institute of
+            Technology (affiliated with the University of Westminster, UK),
+            specializing in full-stack and mobile application development.
+            Currently seeking internship opportunities to apply technical skills
+            to real-world projects.
           </p>
-          
           <div class="hero-buttons">
-            <a href="projects.html" class="cta-button secondary">
-              View My Projects
-              <span>→</span>
-            </a>
-            <a href="Sapoorna_Janani_CV.pdf" class="cta-button" download>
-              Download CV
-              <span>↓</span>
-            </a>
+            <a href="#projects" class="cta-button primary">View My Work →</a>
+            <a
+              href="Sapoorna_Janani_CV.pdf"
+              class="cta-button secondary"
+              download
+              >Download CV ↓</a
+            >
           </div>
-
-          <!-- Quick Stats -->
           <div class="quick-stats">
             <div class="stat">
               <span class="stat-number">5+</span>
-              <span class="stat-label">Projects Completed</span>
+              <span class="stat-label">PROJECTS COMPLETED</span>
             </div>
             <div class="stat">
-              <span class="stat-number">8+</span>
-              <span class="stat-label">Technologies</span>
+              <span class="stat-number">15+</span>
+              <span class="stat-label">TECHNOLOGIES</span>
             </div>
             <div class="stat">
-              <span class="stat-number">2</span>
-              <span class="stat-label">Years Coding</span>
+              <span class="stat-number">2+</span>
+              <span class="stat-label">YEARS CODING</span>
             </div>
           </div>
         </div>
-        <!-- Activity Sidebar -->
         <aside class="social-feed">
           <h2>Current Focus</h2>
-          <!-- Recent Activity 1 -->
           <div class="tweet">
-            <p>
-              🔍 Seeking internship opportunities in web development
-            </p>
+            <p>🔍 Seeking internship opportunities in web development</p>
             <span class="tweet-date">Currently</span>
           </div>
-          <!-- Recent Activity 2 -->
           <div class="tweet">
-            <p>
-              📚 Learning advanced JavaScript and React.js
-            </p>
+            <p>📚 Learning advanced React.js and cloud architecture</p>
             <span class="tweet-date">This month</span>
           </div>
-          <!-- Recent Activity 3 -->
-          <div class="tweet">
-            <p>
-              💼 Working on full-stack e-commerce projects
-            </p>
-            <span class="tweet-date">Active</span>
-          </div>
-        
           <div class="social-links">
-            <a href="https://github.com/Sapoorna" class="social-link">GitHub</a>
+            <a
+              href="https://github.com/Sapoorna"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
             <a
               href="https://www.linkedin.com/in/sapoorna-janani-6169b5264"
               class="social-link"
-              >LinkedIn</a
+              target="_blank"
             >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
           </div>
         </aside>
       </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+
+          <div class="profile-card">
+            <p>
+              Computer Science undergraduate at the Informatics Institute of
+              Technology (affiliated with the University of Westminster, UK)
+              with hands-on experience in full-stack and mobile development
+              using JavaScript, Python, and Dart. Built responsive applications
+              with Flutter, FastAPI, and Supabase, integrating RESTful APIs and
+              cloud backend services.
+            </p>
+
+            <p>
+              Computer Science undergraduate at the Informatics Institute of
+              Technology (affiliated with the University of Westminster, UK)
+              with hands-on experience in full-stack and mobile development
+              using JavaScript, Python, and Dart. Built responsive applications
+              with Flutter, FastAPI, and Supabase, integrating RESTful APIs and
+              cloud backend services. Strong foundation in software engineering
+              principles, object-oriented programming, and database design.
+              Passionate about creating intuitive user interfaces and seamless
+              user experiences, with practical experience in prototyping using
+              Figma and implementing designs across web and mobile platforms.
+            </p>
+
+            <p>
+              Currently seeking an internship opportunity to apply technical
+              knowledge to real-world projects, collaborate with experienced
+              teams, and grow as a developer.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="education-section">
+            <h3>Education Timeline</h3>
+            <div class="education-grid">
+              <div class="education-item">
+                <h4>BSc (Hons) Computer Science</h4>
+                <p class="institution">
+                  Informatics Institute of Technology (affiliated with
+                  University of Westminster)
+                </p>
+                <p class="duration">2024 – Present | Colombo, Sri Lanka</p>
+              </div>
+              <div class="education-item">
+                <h4>Foundation Certificate Programme</h4>
+                <p class="institution">Informatics Institute of Technology</p>
+                <p class="duration">2023-2024 | Colombo, Sri Lanka</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="skills-section">
+            <h3>Technical Skills</h3>
+            <div class="skills-container">
+              <div class="skill-category">
+                <h4>Languages</h4>
+                <div class="skill-list">
+                  <span>Python</span><span>Java</span><span>JavaScript</span
+                  ><span>Dart</span><span>PHP</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Frontend & Mobile</h4>
+                <div class="skill-list">
+                  <span>React</span><span>Flutter</span><span>HTML5</span
+                  ><span>CSS3</span><span>Bootstrap</span><span>Figma</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Backend & APIs</h4>
+                <div class="skill-list">
+                  <span>Node.js</span><span>Express</span><span>FastAPI</span
+                  ><span>JAX-RS</span><span>REST APIs</span><span>JWT</span
+                  ><span>SQLAlchemy</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Databases</h4>
+                <div class="skill-list">
+                  <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span
+                  ><span>Supabase</span><span>Firebase</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Testing</h4>
+                <div class="skill-list">
+                  <span>Jest</span><span>Flutter Widget Testing</span
+                  ><span>PyTest</span><span>JUnit</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h4>Tools & Deployment</h4>
+                <div class="skill-list">
+                  <span>Git</span><span>Postman</span><span>Vite</span
+                  ><span>Render</span><span>Vercel</span
+                  ><span>Apache Tomcat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="certifications-section">
+            <h3>Certifications & Achievements</h3>
+            <div class="certs-grid">
+              <div class="cert-item">
+                <h4>Web Design for Beginners</h4>
+                <p>University of Moratuwa (CODL) - 2025</p>
+              </div>
+              <div class="cert-item">
+                <h4>Front-End Web Development</h4>
+                <p>University of Moratuwa (CODL) - 2025</p>
+              </div>
+              <div class="cert-item">
+                <h4>Server-side Web Programming</h4>
+                <p>University of Moratuwa (CODL) - 2025</p>
+              </div>
+              <div class="cert-item">
+                <h4>Python for Beginners</h4>
+                <p>University of Moratuwa (CODL) - 2025</p>
+              </div>
+              <div class="cert-item">
+                <h4>Hult Prize Qualifiers Round</h4>
+                <p>Participant | IIT Sri Lanka - Feb 2026</p>
+              </div>
+              <div class="cert-item">
+                <h4>Fundamentals of Digital Marketing</h4>
+                <p>Google Digital Garage - 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="languages-section">
+            <h3>Languages</h3>
+            <div class="languages-grid">
+              <div class="language-item">
+                <h4>French</h4>
+                <p>DELF A1 & A2 | Alliance Française</p>
+              </div>
+              <div class="language-item">
+                <h4>English</h4>
+                <p>Fluent</p>
+              </div>
+              <div class="language-item">
+                <h4>Sinhala</h4>
+                <p>Native</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title">My Projects</h2>
+
+          <!-- MoodSync -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/moodsync.png"
+                alt="MoodSync App Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category"
+                  >UI/UX & Frontend Developer | Group Project</span
+                >
+                <h3>MoodSync - AI Powered Mood Tracking App</h3>
+                <div class="tech-stack">
+                  <span>Flutter</span><span>Dart</span><span>FastAPI</span
+                  ><span>Supabase</span><span>JWT</span
+                  ><span>GitHub Actions</span>
+                </div>
+              </div>
+              <p>
+                AI-powered mood tracking mobile application with text and voice
+                emotion detection, personalized recommendations, and mood-based
+                UI theming.
+              </p>
+              <ul class="project-features">
+                <li>
+                  Designed wireframes and UI layouts using Figma with dynamic
+                  mood-based theming
+                </li>
+                <li>
+                  Built backend REST APIs and CRUD operations using FastAPI and
+                  Supabase with JWT authentication
+                </li>
+                <li>
+                  Wrote automated UI test cases using Flutter's widget testing
+                  framework
+                </li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://moodsyncapp.com/"
+                  class="project-link demo"
+                  target="_blank"
+                  >Website →</a
+                >
+                <a
+                  href="https://github.com/Mellissa1211/MoodSync-App.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Estate Agent App -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/estate-agent.png"
+                alt="Estate Agent App Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category">Coursework Project</span>
+                <h3>Estate Agent Property Search App</h3>
+                <div class="tech-stack">
+                  <span>React</span><span>JavaScript</span><span>Vite</span
+                  ><span>Jest</span><span>React Testing Library</span>
+                </div>
+              </div>
+              <p>
+                Fully responsive single-page application for searching and
+                managing property listings with advanced filtering options.
+              </p>
+              <ul class="project-features">
+                <li>
+                  Interactive image gallery with thumbnail navigation and
+                  drag-and-drop favourites management
+                </li>
+                <li>Security with CSP headers and XSS protection</li>
+                <li>Full test coverage using Jest and React Testing Library</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://Sapoorna.github.io/estate-agent-app"
+                  class="project-link demo"
+                  target="_blank"
+                  >Live Demo →</a
+                >
+                <a
+                  href="https://github.com/Sapoorna/estate-agent-app.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Website -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/portfolio.png"
+                alt="Portfolio Website Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category">Personal Project</span>
+                <h3>Portfolio Website</h3>
+                <div class="tech-stack">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                  ><span>Responsive Design</span>
+                </div>
+              </div>
+              <p>
+                Fully responsive portfolio website showcasing academic and
+                personal projects with clean, maintainable code.
+              </p>
+              <ul class="project-features">
+                <li>
+                  Semantic HTML for accessibility and modern CSS with dark theme
+                </li>
+                <li>Interactive UI elements and smooth navigation</li>
+                <li>Deployed on Vercel with custom domain</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://personal-portfolio-beta-two-95.vercel.app"
+                  class="project-link demo"
+                  target="_blank"
+                  >Live Demo →</a
+                >
+                <a
+                  href="https://github.com/Sapoorna/Personal-Portfolio.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Flower Shop -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/flower-shop.png"
+                alt="Flower Shop Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category"
+                  >Full-Stack Personal Project</span
+                >
+                <h3>Flower Shop E-commerce Website</h3>
+                <div class="tech-stack">
+                  <span>Node.js</span><span>Express</span><span>MongoDB</span
+                  ><span>HTML/CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+              <p>
+                Responsive full-stack e-commerce platform with product listings,
+                shopping cart, and simulated checkout using RESTful principles.
+              </p>
+              <ul class="project-features">
+                <li>
+                  Environment-based configuration and modular routing for
+                  scalability
+                </li>
+                <li>
+                  Deployed on Render with MongoDB Atlas for database management
+                </li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://flower-shop-grvz.onrender.com/"
+                  class="project-link demo"
+                  target="_blank"
+                  >Live Demo →</a
+                >
+                <a
+                  href="https://github.com/Sapoorna/flower-shop.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee Shop -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/coffee-shop.png"
+                alt="Coffee Shop Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category">Frontend Personal Project</span>
+                <h3>Coffee Shop Website</h3>
+                <div class="tech-stack">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                  ><span>localStorage</span>
+                </div>
+              </div>
+              <p>
+                Responsive frontend website featuring dynamic product catalog
+                and interactive shopping cart.
+              </p>
+              <ul class="project-features">
+                <li>
+                  Cart functionality using localStorage to simulate user
+                  sessions
+                </li>
+                <li>Cross-device compatibility and clean UI/UX design</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://coffee-shop-website-red.vercel.app/"
+                  class="project-link demo"
+                  target="_blank"
+                  >Live Demo →</a
+                >
+                <a
+                  href="https://github.com/Sapoorna/Coffee-shop-website.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Traffic Analyzer -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="images/traffic-analyzer.png"
+                alt="Traffic Analyzer Screenshot"
+                class="project-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-category">Coursework Project</span>
+                <h3>Traffic Data Analyzer</h3>
+                <div class="tech-stack">
+                  <span>Python</span><span>Tkinter</span><span>CSV</span
+                  ><span>File I/O</span>
+                </div>
+              </div>
+              <p>
+                Python program to analyze traffic data from CSV files with
+                statistical analysis and visualization.
+              </p>
+              <ul class="project-features">
+                <li>Visualized traffic patterns using histograms (Tkinter)</li>
+                <li>Exported processed results to text files for reporting</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Sapoorna/traffic-data-analyzer.git"
+                  class="project-link code"
+                  target="_blank"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="contact-subtitle">
+            I'm currently available for internship opportunities and
+            collaborations
+          </p>
+
+          <div class="contact-content">
+            <form
+              class="contact-form"
+              action="https://formsubmit.co/sapoornajanani@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Message from Sapoorna Janani"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://sapoorna.github.io/Personal-Portfolio/#home"
+              />
+
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <aside class="contact-info">
+              <div class="contact-method">
+                <h3>🟢 Availability</h3>
+                <p>
+                  Open to internship opportunities in web development and
+                  software engineering
+                </p>
+              </div>
+              <div class="contact-method">
+                <h3>📧 Email</h3>
+                <p>sapoornajanani@gmail.com</p>
+              </div>
+              <div class="contact-method">
+                <h3>📍 Location</h3>
+                <p>Colombo, Sri Lanka</p>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/Sapoorna"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/sapoorna-janani-6169b5264"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
       <p>&copy; 2025 Sapoorna Janani. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+      if (
+        window.location.hash === "#home" &&
+        window.location.search.includes("success=true")
+      ) {
+        alert(
+          "✅ Message sent successfully! I will respond within 24-48 hours.",
+        );
+      }
+    </script>
   </body>
 </html>
