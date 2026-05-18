@@ -17,8 +17,7 @@
     />
     <meta name="author" content="Sapoorna Janani" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      ="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    <link="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -277,8 +276,48 @@
         <div class="container">
           <h2 class="section-title">My Projects</h2>
 
+          <!-- Filter Tabs -->
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="dev">Development</button>
+            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+          </div>
+
+          <!-- UI/UX Design Card -->
+          <div class="project-card design-item" data-category="design">
+            <div class="project-image design-preview-box">
+              <a href="https://www.figma.com/proto/hU7TUgMDL2kH9BELvh9c66/Furniture-Shop-website?node-id=2012-246&p=f&viewport=-1025%2C1220%2C0.24&t=ouKMBk0BVFx4ZuXf-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2012%3A246&page-id=0%3A1" target="_blank" class="design-thumb-link">
+                <div class="design-thumb-overlay">
+                  <span class="design-thumb-icon">&#9654;</span>
+                  <span>View Prototype</span>
+                </div>
+                <div class="design-thumb-bg">
+                  <span class="design-thumb-label">Furniture Shop</span>
+                </div>
+              </a>
+            </div>
+            <div class="project-content">
+              <span class="project-category">UI/UX Design · Figma</span>
+              <h3>Furniture Shop Website</h3>
+              <div class="tech-stack">
+                <span>Figma</span><span>Prototyping</span><span>UI Design</span><span>E-commerce</span>
+              </div>
+              <p>
+                A fully interactive e-commerce prototype for a modern furniture brand. Focused on clean visual hierarchy, intuitive navigation, and a warm, premium aesthetic.
+              </p>
+              <ul class="project-features">
+                <li>End-to-end clickable prototype with realistic user flows</li>
+                <li>Custom component library and consistent design tokens</li>
+                <li>Responsive layouts for desktop and mobile viewports</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://www.figma.com/proto/hU7TUgMDL2kH9BELvh9c66/Furniture-Shop-website?node-id=2012-246&p=f&viewport=-1025%2C1220%2C0.24&t=ouKMBk0BVFx4ZuXf-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2012%3A246&page-id=0%3A1" class="project-link demo" target="_blank">View Prototype →</a>
+              </div>
+            </div>
+          </div>
+
           <!-- MoodSync -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/moodsync.png"
@@ -335,7 +374,7 @@
           </div>
 
           <!-- Estate Agent App -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/estate-agent.png"
@@ -382,7 +421,7 @@
           </div>
 
           <!-- Portfolio Website -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/portfolio.png"
@@ -428,7 +467,7 @@
           </div>
 
           <!-- Flower Shop -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/flower-shop.png"
@@ -478,7 +517,7 @@
           </div>
 
           <!-- Coffee Shop -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/coffee-shop.png"
@@ -524,7 +563,7 @@
           </div>
 
           <!-- Traffic Analyzer -->
-          <div class="project-card">
+          <div class="project-card dev-item" data-category="dev">
             <div class="project-image">
               <img
                 src="images/traffic-analyzer.png"
@@ -561,6 +600,7 @@
           </div>
         </div>
       </section>
+
 
       <!-- Contact Section -->
       <section id="contact" class="contact-section">

@@ -443,6 +443,99 @@ nav {
     color: var(--text-muted);
 }
 
+/* ===== PROJECT FILTERS ===== */
+.project-filters {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+/* Design card thumbnail */
+.design-preview-box {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    position: relative;
+    overflow: hidden;
+}
+
+.design-thumb-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    text-decoration: none;
+    position: relative;
+}
+
+.design-thumb-bg {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.design-thumb-label {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.12);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.design-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 136, 229, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    backdrop-filter: blur(2px);
+}
+
+.design-thumb-icon {
+    font-size: 2.5rem;
+}
+
+.design-thumb-link:hover .design-thumb-overlay {
+    opacity: 1;
+}
+
 /* ===== PROJECTS SECTION ===== */
 .projects-section {
     padding: 4rem 0;
@@ -458,7 +551,7 @@ nav {
     transition: transform 0.3s ease;
 }
 
-.project-card:hover .project-img  {
+.project-card:hover .project-img {
     transform: scale(1.05);
 }
 
@@ -562,6 +655,129 @@ nav {
 
 .project-link:hover {
     transform: translateY(-2px);
+}
+
+/* ===== UI/UX DESIGNS SECTION (FIXED - SMALLER & BETTER) ===== */
+.designs-section {
+    padding: 4rem 0;
+}
+
+.designs-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+    font-size: 1.05rem;
+}
+
+.design-card {
+    display: flex;
+    gap: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.design-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(30, 136, 229, 0.15);
+}
+
+.design-preview {
+    flex: 0.9;
+    min-height: 260px;
+    max-height: 260px;
+    background: #1a1a2e;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.design-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.design-preview a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+.design-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.design-content {
+    flex: 1.2;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.design-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.design-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Preview overlay styles */
+.preview-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.preview-overlay i {
+    font-size: 42px;
+    color: var(--primary-light);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+.preview-overlay span {
+    background: var(--gradient);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.design-preview:hover .preview-overlay {
+    opacity: 1;
+}
+
+.design-preview:hover img {
+    transform: scale(1.03);
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -696,6 +912,36 @@ footer {
     h2 {
         font-size: 2rem;
     }
+    
+    /* Design card responsive */
+    .design-card {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .design-preview {
+        min-height: 240px;
+        max-height: 240px;
+        margin: 1.5rem 1.5rem 0 1.5rem;
+    }
+    
+    .design-preview img {
+        min-height: 240px;
+    }
+
+    .design-content {
+        padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .preview-overlay i {
+        font-size: 36px;
+    }
+    
+    .preview-overlay span {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -748,5 +994,42 @@ footer {
     .hero-content p {
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    /* Design card mobile */
+    .design-preview {
+        min-height: 200px;
+        max-height: 200px;
+        margin: 1rem 1rem 0 1rem;
+    }
+    
+    .design-preview img {
+        min-height: 200px;
+    }
+    
+    .design-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .design-content p {
+        font-size: 0.85rem;
+    }
+    
+    .tech-stack span {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.6rem;
+    }
+    
+    .project-features li {
+        font-size: 0.8rem;
+    }
+    
+    .preview-overlay i {
+        font-size: 32px;
+    }
+    
+    .preview-overlay span {
+        padding: 0.35rem 0.9rem;
+        font-size: 0.7rem;
     }
 }
