@@ -9,7 +9,8 @@ filterBtns.forEach(btn => {
 
         const filter = this.getAttribute('data-filter');
         projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            const cardCategory = card.getAttribute('data-category');
+            if (filter === 'all' || cardCategory.includes(filter)) {
                 card.classList.remove('hidden');
             } else {
                 card.classList.add('hidden');
