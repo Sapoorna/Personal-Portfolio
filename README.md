@@ -3,7 +3,7 @@
 A responsive portfolio website showcasing my projects and skills.
 
 ## Live Demo
-👉 [View Live Website](https://sapoorna.github.io/Personal-Portfolio)
+👉 [View Live Website](https://sapoornajanani.vercel.app/)
 
 ## Features
 - ✅ Fully responsive design
