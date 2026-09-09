@@ -51,7 +51,7 @@ navLinks.forEach(link => {
         
         if (targetSection) {
             targetSection.scrollIntoView({
-                behavior: 'smooth',
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
                 block: 'start'
             });
             
@@ -70,3 +70,20 @@ navLinks.forEach(link => {
 // Listen for scroll events
 window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('load', updateActiveNav);
+// Decorative entrance motion; never hide content while waiting for an observer.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !motionPreference.matches) {
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('glass-reveal');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.hero-content, .social-feed, .section-title, .profile-card, .education-item, .skill-category, .project-card, .contact-form, .contact-info').forEach(element => {
+        revealObserver.observe(element);
+        element.addEventListener('animationend', () => element.classList.remove('glass-reveal'), { once: true });
+    });
+}
