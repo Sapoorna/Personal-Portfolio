@@ -424,6 +424,23 @@ nav {
     transform: scale(1.1);
 }
 
+.skill-icon-item .skill-logo {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.skill-icon-item:hover .skill-logo { transform: scale(1.1); }
+
+@media (max-width: 768px) {
+    .skill-icon-item .skill-logo { width: 1.5rem; height: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .skill-icon-item .skill-logo { width: 1.3rem; height: 1.3rem; }
+}
+
 .skill-icon-item span {
     font-size: 0.7rem;
     font-weight: 500;
@@ -866,6 +883,13 @@ nav {
     border-color: var(--primary);
 }
 
+/* Keep the message field within the form; its height follows the text. */
+.contact-form textarea {
+    resize: none;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
 .submit-btn {
     background: var(--gradient);
     color: white;
@@ -885,6 +909,7 @@ nav {
 }
 
 .contact-info {
+    align-self: start;
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 16px;
@@ -1460,12 +1485,52 @@ footer { background: rgba(4, 10, 20, 0.3); }
     .social-link:hover { background: rgba(83, 169, 241, 0.18); }
 }
 
-/* Content remains visible when JavaScript or animation is unavailable. */
-@keyframes glass-arrive {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Section entrances combine an expanding light wash, heading lift, and line sweep. */
+.about-section, .projects-section, .contact-section {
+    position: relative;
+    isolation: isolate;
 }
-.glass-reveal { animation: glass-arrive 650ms cubic-bezier(0.2, 0.65, 0.3, 1) both; }
+.about-section::before, .projects-section::before, .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 420px;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(68, 168, 250, 0.20), transparent 70%);
+    transform-origin: top center;
+}
+.projects-section::before {
+    background: radial-gradient(ellipse at 50% 0%, rgba(53, 215, 207, 0.19), transparent 70%);
+}
+.section-entering::before {
+    animation: section-light 1500ms ease-out both;
+}
+.section-entering .section-title {
+    animation: section-heading 950ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.section-entering .section-title::after {
+    animation: section-line 1100ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
+}
+@keyframes section-light {
+    0% { opacity: 0; transform: scaleX(0.35); }
+    40% { opacity: 1; }
+    100% { opacity: 0.45; transform: scaleX(1); }
+}
+@keyframes section-heading {
+    from { opacity: 0; translate: 0 36px; scale: 0.94; }
+    to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes section-line {
+    from { transform: scaleX(0); opacity: 0; }
+    to { transform: scaleX(1); opacity: 0.8; }
+}
+@media (max-width: 768px) {
+    .about-section::before, .projects-section::before, .contact-section::before { height: 280px; }
+}
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     :root { --bg-card: #101e32; }
@@ -1505,4 +1570,5 @@ footer { background: rgba(4, 10, 20, 0.3); }
         transition: none !important;
     }
     body::before { will-change: auto; }
+    .section-entering::before { opacity: 0; }
 }

@@ -70,20 +70,57 @@ navLinks.forEach(link => {
 // Listen for scroll events
 window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('load', updateActiveNav);
-// Decorative entrance motion; never hide content while waiting for an observer.
+// Section entrance effects; cards remain visible without entrance animations.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-if ('IntersectionObserver' in window && !motionPreference.matches) {
-    const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('glass-reveal');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.08 });
+const revealedSections = new WeakSet();
+let stopScrollMotion = () => {};
 
-    document.querySelectorAll('.hero-content, .social-feed, .section-title, .profile-card, .education-item, .skill-category, .project-card, .contact-form, .contact-info').forEach(element => {
-        revealObserver.observe(element);
-        element.addEventListener('animationend', () => element.classList.remove('glass-reveal'), { once: true });
-    });
+function setupScrollMotion() {
+    stopScrollMotion();
+    if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+    // Observe the heading, not the whole long section, so transitions start at its entrance.
+    const headings = [...document.querySelectorAll('main > section .section-title')];
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const section = entry.target.closest('section');
+            if (!revealedSections.has(section)) {
+                revealedSections.add(section);
+                section.classList.add('section-entering');
+            }
+            // Stop observing before heading movement can retrigger the entrance.
+            sectionObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.25, rootMargin: '0px 0px -24px 0px' });
+    headings.forEach(heading => sectionObserver.observe(heading));
+
+    stopScrollMotion = () => {
+        sectionObserver.disconnect();
+        headings.forEach(heading => heading.closest('section').classList.remove('section-entering'));
+    };
+}
+
+setupScrollMotion();
+motionPreference.addEventListener('change', setupScrollMotion);
+
+// Grow the message field downward, retaining its original five-row minimum.
+const messageField = document.getElementById('message');
+if (messageField) {
+    const minimumMessageHeight = messageField.getBoundingClientRect().height;
+    messageField.style.overflowY = 'hidden';
+
+    function fitMessageHeight() {
+        messageField.style.height = 'auto';
+        const styles = window.getComputedStyle(messageField);
+        const borderHeight = parseFloat(styles.borderTopWidth) + parseFloat(styles.borderBottomWidth);
+        messageField.style.height = `${Math.max(minimumMessageHeight, messageField.scrollHeight + borderHeight)}px`;
+    }
+
+    messageField.addEventListener('input', fitMessageHeight);
+    window.addEventListener('resize', fitMessageHeight);
+    window.addEventListener('pageshow', fitMessageHeight);
+    messageField.form?.addEventListener('reset', () => requestAnimationFrame(fitMessageHeight));
+    document.fonts?.ready.then(fitMessageHeight);
+    fitMessageHeight();
 }
